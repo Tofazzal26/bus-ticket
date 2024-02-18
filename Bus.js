@@ -93,11 +93,14 @@ for (  let index = 0; index < totalSeat.length; index++) {
 
 
 function apply() {
+
+    // this is 15% discount function
+
     const applyBtn = document.getElementById('applyBtn');
     applyBtn.addEventListener('click', function() {
         const couponInput = document.getElementById('couponCode').value;
         const couponCodes = couponInput.toUpperCase().split(" ").join("");
-        console.log(couponCodes);
+        
 
         if( couponCodes == 'NEW15') {
             const totalPrice = document.getElementById('totalPrice').innerText;
@@ -110,14 +113,34 @@ function apply() {
             p.innerText = `Discount Price: ${discount} TK`;
             discountAdd.appendChild(p);
             const grandTotal = document.getElementById('grandTotal').innerText = totalDiscount;
+            const applyBtn = document.getElementById('applyBtn');
+            document.getElementById('couponCode').value = '';
+            applyBtn.setAttribute('disabled', true);
             
+        } else if(couponCodes == 'COUPLE20') {
+            const totalPrice = document.getElementById('totalPrice').innerText;
+            const ConvertTotalPrice = parseInt(totalPrice);
+            const discount = ConvertTotalPrice * 0.20
+            const totalDiscount = ConvertTotalPrice - discount;
+            const discountAdd = document.getElementById('discountAdd');
+            const p = document.createElement('p');
+            p.classList.add('text-sm', 'font-medium', 'inter', 'text-black');
+            p.innerText = `Discount Price: ${discount} TK`;
+            discountAdd.appendChild(p);
+            const grandTotal = document.getElementById('grandTotal').innerText = totalDiscount;
+            const applyBtn = document.getElementById('applyBtn');
+            document.getElementById('couponCode').value = '';
+            applyBtn.setAttribute('disabled', true);
         } else {
-            alert('Coupon code not match');
+            alert('Coupon code not matched !');
         }
+
     })
 }
 
+
 apply();
+
 
 
 
