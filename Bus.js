@@ -96,27 +96,28 @@ function apply() {
     const applyBtn = document.getElementById('applyBtn');
     applyBtn.addEventListener('click', function() {
         const couponInput = document.getElementById('couponCode').value;
+        const couponCodes = couponInput.toUpperCase().split(" ").join("");
+        console.log(couponCodes);
 
-        if( couponInput == 'NEW15') {
+        if( couponCodes == 'NEW15') {
             const totalPrice = document.getElementById('totalPrice').innerText;
             const ConvertTotalPrice = parseInt(totalPrice);
             const discount = ConvertTotalPrice * 0.15
             const totalDiscount = ConvertTotalPrice - discount;
             const discountAdd = document.getElementById('discountAdd');
             const p = document.createElement('p');
-            p.classList.add('text-base', 'font-medium', 'inter', 'text-black');
-            p.innerText = `Discount: ${discount} TK`;
+            p.classList.add('text-sm', 'font-medium', 'inter', 'text-black');
+            p.innerText = `Discount Price: ${discount} TK`;
             discountAdd.appendChild(p);
+            const grandTotal = document.getElementById('grandTotal').innerText = totalDiscount;
+            
+        } else {
+            alert('Coupon code not match');
         }
     })
 }
 
 apply();
 
-
-function commontIdText(id, value){
-    const element = document.getElementById(id);
-    element.innerText = value;
-}
 
 
