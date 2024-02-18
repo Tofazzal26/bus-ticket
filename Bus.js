@@ -15,7 +15,6 @@ for (  let index = 0; index < totalSeat.length; index++) {
             return;
         }
 
-        console.log(count);
 
         const seatName = event.target.innerText
         
@@ -28,7 +27,7 @@ for (  let index = 0; index < totalSeat.length; index++) {
         
         const convertDecress = parseInt(seatDecress);
 
-        document.getElementById('seatDecress').innerText = convertDecress + 1;
+        const addSeat = document.getElementById('seatDecress').innerText = convertDecress + 1;
 
          // seat count - end
 
@@ -38,6 +37,7 @@ for (  let index = 0; index < totalSeat.length; index++) {
         const SeatLeft = document.getElementById('Seat-Left').innerText;
         const ConvertSeat = parseInt(SeatLeft);
         document.getElementById('Seat-Left').innerText = ConvertSeat - 1;
+        
         
 
         //  Seat Left end
@@ -81,14 +81,41 @@ for (  let index = 0; index < totalSeat.length; index++) {
 
         event.target.setAttribute('disabled', true);
 
+        // apply coupon code here
+
+        if( addSeat === 4) {
+            const applyBtn = document.getElementById('applyBtn');
+            applyBtn.removeAttribute('disabled', true);
+        }
+
     })
 }
 
 
+function apply() {
+    const applyBtn = document.getElementById('applyBtn');
+    applyBtn.addEventListener('click', function() {
+        const couponInput = document.getElementById('couponCode').value;
+
+        if( couponInput == 'NEW15') {
+            const totalPrice = document.getElementById('totalPrice').innerText;
+            const ConvertTotalPrice = parseInt(totalPrice);
+            const discount = ConvertTotalPrice * 0.15
+            const totalDiscount = ConvertTotalPrice - discount;
+            const discountAdd = document.getElementById('discountAdd');
+            const p = document.createElement('p');
+            p.classList.add('text-base', 'font-medium', 'inter', 'text-black');
+            p.innerText = `Discount: ${discount} TK`;
+            discountAdd.appendChild(p);
+        }
+    })
+}
+
+apply();
 
 
 function commontIdText(id, value){
-    const element = document.getElementById(id)
+    const element = document.getElementById(id);
     element.innerText = value;
 }
 
