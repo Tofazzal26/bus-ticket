@@ -88,6 +88,8 @@ for (  let index = 0; index < totalSeat.length; index++) {
             applyBtn.removeAttribute('disabled', true);
         }
 
+
+
     })
 }
 
@@ -136,6 +138,31 @@ function apply() {
         }
 
     })
+
+
+    // input validation
+
+    
+    const phoneNumber = document.getElementById('phoneNumber');
+    phoneNumber.addEventListener('keyup', function(event) {
+
+        const seatCount = document.getElementById('seatDecress').innerText;
+        const inputValue = parseInt(event.target.value);
+        const convertSeats = parseInt(seatCount);
+        
+        if(convertSeats >= 1 && typeof inputValue == 'number') {
+            const nextBtn = document.getElementById('nextBtn');
+            nextBtn.removeAttribute('disabled', true);
+        }
+        
+
+    })
+    
+
+
+
+
+
 }
 
 

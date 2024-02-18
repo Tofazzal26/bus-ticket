@@ -416,7 +416,7 @@
                                         </div>
                                         <div class="mt-4">
                                             <h2 class="text-lg font-semibold inter text-black mb-4">Phone Number*</h2>
-                                            <input type="text" placeholder="Enter your phone number" class="input text-[#a5a9b4] text-base inter input-bordered w-full h-[70px]" />
+                                            <input id="phoneNumber" type="number" placeholder="Enter your phone number" class="input text-[#a5a9b4] text-base inter input-bordered w-full h-[70px]" required/>
                                         </div>
                                         <div class="mt-4">
                                             <h2 class="text-lg font-semibold inter text-black mb-4">Email ID</h2>
@@ -427,7 +427,7 @@
                                             <!-- Open the modal using ID.showModal() method -->
 
                                             <div>
-                                                <button disabled class="btn bg-[#1dd100] w-full text-xl text-white h-[70px] rounded-xl font-extrabold raleway" onclick="my_modal_5.showModal()">Next</button>
+                                                <button id="nextBtn" disabled class="btn bg-[#1dd100] w-full text-xl text-white h-[70px] rounded-xl font-extrabold raleway" onclick="my_modal_5.showModal()">Next</button>
                                                 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
                                                 <div class="modal-box flex flex-col items-center text-center justify-center space-y-4 py-10">
                                                     <img src="images/success.png" alt="">
