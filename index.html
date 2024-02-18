@@ -383,7 +383,7 @@
                                             <div class="mt-4">
                                                 <label class="input flex items-center py-8 gap-2">
                                                     <input type="text" id="couponCode" class="grow text-[#a5a9b4] inter" placeholder="Have any coupon?" />
-                                                    <button disabled id="applyBtn" class="py-2 px-6 bg-[#1DD100] text-base font-semibold text-white rounded-md">Apply</button>
+                                                    <button disabled id="applyBtn" class="btn py-2 px-6 bg-[#1DD100] text-base font-semibold text-white rounded-md">Apply</button>
                                                 </label>
                                             </div>
 
@@ -416,7 +416,25 @@
                                             <input type="text" placeholder="Enter your email id" class="input text-[#a5a9b4] text-base inter input-bordered w-full h-[70px]" />
                                         </div>
                                         <div class="mt-6">
-                                            <button class="btn bg-[#1dd100] w-full text-xl text-white h-[70px] rounded-xl font-extrabold raleway">Next</button>
+
+                                            <!-- Open the modal using ID.showModal() method -->
+
+                                            <div>
+                                                <button class="btn bg-[#1dd100] w-full text-xl text-white h-[70px] rounded-xl font-extrabold raleway" onclick="my_modal_5.showModal()">Next</button>
+                                                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                                <div class="modal-box">
+                                                    <img src="images/success.png" alt="">
+                                                    <p class="py-4">SUCCESS</p>
+                                                    <div class="modal-action">
+                                                    <form method="dialog">
+                                                        <!-- if there is a button in form, it will close the modal -->
+                                                        <button class="btn">Continue</button>
+                                                    </form>
+                                                    </div>
+                                                </div>
+                                                </dialog>
+                                            </div>
+
                                         </div>
 
                                         <div class="text-[#7e8086] text-base inter flex justify-center gap-20 mt-5">
