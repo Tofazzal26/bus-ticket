@@ -114,8 +114,8 @@ function apply() {
             discountAdd.appendChild(p);
             const grandTotal = document.getElementById('grandTotal').innerText = totalDiscount;
             const applyBtn = document.getElementById('applyBtn');
-            document.getElementById('couponCode').value = '';
-            applyBtn.setAttribute('disabled', true);
+            const inputHidden = document.getElementById('inputHidden');
+            inputHidden.classList.add('hidden');
             
         } else if(couponCodes == 'COUPLE20') {
             const totalPrice = document.getElementById('totalPrice').innerText;
@@ -129,8 +129,8 @@ function apply() {
             discountAdd.appendChild(p);
             const grandTotal = document.getElementById('grandTotal').innerText = totalDiscount;
             const applyBtn = document.getElementById('applyBtn');
-            document.getElementById('couponCode').value = '';
-            applyBtn.setAttribute('disabled', true);
+            const inputHidden = document.getElementById('inputHidden');
+            inputHidden.classList.add('hidden');
         } else {
             alert('Coupon code not matched !');
         }

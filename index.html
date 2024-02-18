@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- google font raleway and inter cdn link here -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:slnt,wght@-10..0,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -17,6 +21,9 @@
         }
         .inter {
             font-family: "Inter", sans-serif;
+        }
+        .roboto {
+            font-family: "Roboto", sans-serif;
         }
     </style>
 </head>
@@ -380,7 +387,7 @@
                                                 </div>
                                             </div>
 
-                                            <div class="mt-4">
+                                            <div id="inputHidden" class="mt-4">
                                                 <label class="input flex items-center py-8 gap-2">
                                                     <input type="text" id="couponCode" class="grow text-[#a5a9b4] inter" placeholder="Have any coupon?" />
                                                     <button disabled id="applyBtn" class="btn py-2 px-6 bg-[#1DD100] text-base font-semibold text-white rounded-md">Apply</button>
@@ -420,15 +427,18 @@
                                             <!-- Open the modal using ID.showModal() method -->
 
                                             <div>
-                                                <button class="btn bg-[#1dd100] w-full text-xl text-white h-[70px] rounded-xl font-extrabold raleway" onclick="my_modal_5.showModal()">Next</button>
+                                                <button disabled class="btn bg-[#1dd100] w-full text-xl text-white h-[70px] rounded-xl font-extrabold raleway" onclick="my_modal_5.showModal()">Next</button>
                                                 <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
-                                                <div class="modal-box">
+                                                <div class="modal-box flex flex-col items-center text-center justify-center space-y-4 py-10">
                                                     <img src="images/success.png" alt="">
-                                                    <p class="py-4">SUCCESS</p>
+                                                    <p class="py-4 text-2xl font-bold roboto text-[#27AE60]">SUCCESS</p>
+                                                    <p class="text-lg font-medium roboto">Thank you for Booking Our Bus Seats. 
+                                                        We are working hard to find the best service and deals for you.</p>
+                                                        <p class="text-xl font-light text-[#797979]">Shortly you will find a confirmation in your email.</p>
                                                     <div class="modal-action">
                                                     <form method="dialog">
                                                         <!-- if there is a button in form, it will close the modal -->
-                                                        <button class="btn">Continue</button>
+                                                        <button class="bg-[#27ae60] py-3 px-20 rounded-full text-xl font-semibold roboto text-white">Continue</button>
                                                     </form>
                                                     </div>
                                                 </div>
