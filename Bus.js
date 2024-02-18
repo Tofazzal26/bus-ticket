@@ -2,9 +2,21 @@
 
 const totalSeat = document.getElementsByClassName('Seat');
 
+let count =  4;
+
 for (  let index = 0; index < totalSeat.length; index++) {
     const element = totalSeat[index];
     element.addEventListener('click', function(event) {
+
+        count = count - 1;
+
+        if( count < 0) {
+            alert('Only 4 seats can be selected');
+            return;
+        }
+
+        console.log(count);
+
         const seatName = event.target.innerText
         
         const backgroundColor = event.target.style.background = "#1dd100";
@@ -55,11 +67,19 @@ for (  let index = 0; index < totalSeat.length; index++) {
 
         const firstTicketPrice = document.getElementsByClassName('ticketPrice')[0].childNodes[2].innerText;
         const convertTicket = parseInt(firstTicketPrice);
-        console.log(convertTicket);
+        
 
         // total price here
         
-        const 
+        const totalPrice = document.getElementById('totalPrice').innerText;
+        const convertTotal = parseInt(totalPrice);
+        document.getElementById('totalPrice').innerText = convertTicket + convertTotal;
+
+        // grand total here
+
+        const grandTotal = document.getElementById('grandTotal').innerText = convertTicket + convertTotal;
+
+        event.target.setAttribute('disabled', true);
 
     })
 }
