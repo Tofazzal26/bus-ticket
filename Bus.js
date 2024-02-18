@@ -147,15 +147,14 @@ function apply() {
     phoneNumber.addEventListener('keyup', function(event) {
 
         const seatCount = document.getElementById('seatDecress').innerText;
-        const inputValue = parseInt(event.target.value);
+        const inputValue = event.target.value;
         const convertSeats = parseInt(seatCount);
         
-        if(convertSeats >= 1 && typeof inputValue == 'number') {
+        if(convertSeats >= 1 && inputValue.length > 0) {
             const nextBtn = document.getElementById('nextBtn');
             nextBtn.removeAttribute('disabled', true);
         }
         
-
     })
     
 
