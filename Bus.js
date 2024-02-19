@@ -134,7 +134,7 @@ function apply() {
             const inputHidden = document.getElementById('inputHidden');
             inputHidden.classList.add('hidden');
         } else if( couponCodes == '') {
-            alert('Please Write Valid Coupon Code');
+            alert('Please write a valid coupon code');
         }
         else {
             alert('Coupon code not matched !');
@@ -159,17 +159,9 @@ function apply() {
         }
         
     })
-    
-
-
-
 
 
 }
 
 
 apply();
-
-
-
-
