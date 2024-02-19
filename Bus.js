@@ -133,7 +133,10 @@ function apply() {
             const applyBtn = document.getElementById('applyBtn');
             const inputHidden = document.getElementById('inputHidden');
             inputHidden.classList.add('hidden');
-        } else {
+        } else if( couponCodes == '') {
+            alert('Please Write Valid Coupon Code');
+        }
+        else {
             alert('Coupon code not matched !');
         }
 
