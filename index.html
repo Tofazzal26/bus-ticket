@@ -27,12 +27,12 @@
         }
     </style>
 </head>
-<body>
+<body class="px-3 lg:px-0">
 
     <!-- header section style here -->
 
     <div class="container mx-auto">
-        <div class="mt-8">
+        <div class="lg:mt-8 mt-4">
             <div class="navbar bg-base-100">
                 <div class="navbar-start">
                   <div class="dropdown">
@@ -42,7 +42,7 @@
                   </div>
                     <div class="flex gap-4 items-center">
                         
-                        <h2 href="#phporibohon" class="raleway lg:text-4xl text-3xl font-extrabold text-black garamond ">Bus-Ticket</h2>
+                        <h2 href="#phporibohon" class="raleway lg:text-4xl text-base  font-extrabold text-black garamond ">Bus-Ticket</h2>
                     </div>
                 </div>
                 <div class="navbar-center hidden lg:flex">
@@ -54,7 +54,7 @@
                   </ul>
                 </div>
                 <div class="navbar-end">
-                  <button class="font-bold text-xl bg-[#e8fae5] rounded-lg flex items-center gap-3 py-4 px-8 text-[#1dd100]">Bus <img class="border-2 border-dotted border-[gray]" src="images/bus-icon.png" alt=""></button>
+                  <button class="font-bold text-xl bg-[#e8fae5] rounded-lg flex items-center gap-3 lg:py-4 py-2 px-4 lg:px-8 text-[#1dd100]">Bus <img class="border-2 border-dotted border-[gray]" src="images/bus-icon.png" alt=""></button>
                 </div>
               </div>
         </div>
@@ -75,10 +75,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="absolute top-[630px]">
-                    <div class="flex gap-6">
-                        <div class="w-[420px] h-[165px] bg-[#1dd100] rounded-3xl">
-                            <div class="flex items-center gap-4 bg-white w-[420px] h-40 px-12 rounded-3xl">
+                <div class="lg:absolute relative top-[630px]">
+                    <div class="flex flex-col lg:flex-row gap-6">
+                        <div class="lg:w-[420px] h-[165px] bg-[#1dd100] rounded-3xl">
+                            <div class="flex items-center gap-4 bg-white lg:w-[420px] h-40 px-12 rounded-3xl">
                                 <div class="border-2 border-dotted border-gray-400">
                                     <img src="images/people.png" alt="">
                                 </div>
@@ -88,8 +88,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-[420px] h-[165px] bg-[#1dd100] rounded-3xl">
-                            <div class="flex items-center bg-white w-[420px] h-40 gap-4 px-12 rounded-3xl">
+                        <div class="lg:w-[420px] h-[165px] bg-[#1dd100] rounded-3xl">
+                            <div class="flex items-center bg-white lg:w-[420px] h-40 gap-4 px-12 rounded-3xl">
                                 <div class="border-2 border-dotted border-gray-400">
                                     <img src="images/ticket-cupon.png" alt="">
                                 </div>
@@ -99,8 +99,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="w-[420px] h-[165px] bg-[#1dd100] rounded-3xl">
-                            <div class="flex items-center bg-white w-[420px] h-40 px-12 gap-4 rounded-3xl">
+                        <div class="lg:w-[420px] h-[165px] bg-[#1dd100] rounded-3xl">
+                            <div class="flex items-center bg-white lg:w-[420px] h-40 px-12 gap-4 rounded-3xl">
                                 <div class="border-2 border-dotted border-gray-400">
                                     <img src="images/stoppage.png" alt="">
                                 </div>
@@ -121,7 +121,7 @@
     <!-- Best offers for you section style here -->
 
 
-    <section class="container mx-auto">
+    <section class="container mx-auto hidden">
         <div>
             <h1 class="text-4xl raleway font-bold mt-40 text-center text-black">Best offers for you</h1>
         </div>
@@ -170,12 +170,12 @@
     </section>
 
     <!-- see all offers section style here -->
-    <section>
+    <section class="hidden">
         <div class="flex justify-center items-center">
             <button class="text-xl font-bold raleway text-center mt-20 border-[#1dd100] border px-8 py-5 rounded-xl text-[#1dd100]">See All Offers</button>
         </div>
 
-        <main class="bg-[#f7f8f8] pb-[150px]">
+        <main class="bg-[#f7f8f8] pb-[150px] hidden">
             <div class="text-center space-y-8 pt-32 mt-32">
                 <h2  id="phporibohon" class="text-5xl font-bold raleway text-black">P.H Paribahan</h2>
                 <p class="text-lg inter w-[730px] mx-auto">I bought the ticket advanced from online and was waiting for the day. Finally, the day came and I went to the bus counter</p>
@@ -471,7 +471,7 @@
         
          <!-- footer section style here -->
 
-         <section class="bg-[#030712]">
+         <section class="bg-[#030712] hidden">
             <div class="container mx-auto">
 
                 <div class="py-36">
